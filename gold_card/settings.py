@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2m&*wa7a=a%a3j*mlx$mj_94h#w@_7e^e5tlwbh90m4okexbs7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.5','24.10.0.251']  # Ajout de '192.168.1.5'
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'nom_de_l_application',
 ]
 
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'gold_card.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gold_card',
+        'NAME': 'pfa_django',
         'USER': 'root',
         'PASSWORD': 'admin',
         'HOST': '127.0.0.1',

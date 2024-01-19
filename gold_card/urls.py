@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from nom_de_l_application.views import showDemoPage, process_identity_card
+from nom_de_l_application.views import showDemoPage, process_identity_card, MonFormulaireListCreateView, \
+    process_identity_card_web
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',showDemoPage),
-    path('process_identity_card/', process_identity_card, name='process_identity_card'),
+    path('', showDemoPage, name='show_demo_page'),
+    path('process_identity_card_web/', process_identity_card_web, name='process_identity_card_web'),
+    path('api/v1/process_identity_card/', process_identity_card, name='process_identity_card'),
 ]

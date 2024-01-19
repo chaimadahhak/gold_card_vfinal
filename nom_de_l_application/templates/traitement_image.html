@@ -1,12 +1,24 @@
+<!-- templates/traitement_image.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
+    <title>Résultat du Traitement d'Image</title>
 </head>
 <body>
-    <h1>Text Extracted from Image</h1>
-    <p>{{ result }}</p>
+    <h1>Résultat du Traitement d'Image</h1>
+
+    {% if result %}
+        <p>{{ result }}</p>
+        <p>Nom: {{ a }}</p>
+        <p>Prénom: {{ b }}</p>
+        <p>Adresse: {{ c }}</p>
+        <p>Date de naissance: {{ e }}</p>
+    {% else %}
+        <p>Aucun résultat disponible.</p>
+    {% endif %}
+
+    <a href="{% url 'show_demo_page' %}">Retour à la page d'accueil</a>
 </body>
 </html>

@@ -12,3 +12,10 @@ class UserData(models.Model):
 
     def __str__(self):
         return f'{self.name} {self.surname} - CIN: {self.cin}'
+
+
+class MonFormulaire(models.Model):
+    nom = models.CharField(max_length=100)
+    prenom = models.CharField(max_length=100)
+    adresse = models.CharField(max_length=255)
+    date_naissance = models.DateField()
